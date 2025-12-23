@@ -1,0 +1,12 @@
+[gd_resource type="Resource" script_class="SoftwareInfo" load_steps=4 format=3 uid="uid://dhr5pa24v6sd2"]
+
+[ext_resource type="Texture2D" uid="uid://c7kib7ubtikl8" path="res://icon.svg" id="1_4fof6"]
+[ext_resource type="Script" uid="uid://37sp1c6j0sq0" path="res://addons/GodotVirtualPC/src/resource/SoftwareInfo.gd" id="2_1tb5o"]
+[ext_resource type="PackedScene" uid="uid://bwx4vdmehi2ve" path="res://test/Software_Windows/world.tscn" id="3_4fof6"]
+
+[resource]
+script = ExtResource("2_1tb5o")
+name = "world"
+icon = ExtResource("1_4fof6")
+software_window = ExtResource("3_4fof6")
+metadata/_custom_type_script = "uid://37sp1c6j0sq0"

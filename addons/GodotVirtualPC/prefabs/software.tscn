@@ -3,6 +3,7 @@
 [ext_resource type="Script" uid="uid://bkmo5guq1m1nv" path="res://addons/GodotVirtualPC/src/prefabs/software.gd" id="1_rl7i6"]
 
 [node name="Software" type="Control"]
+custom_minimum_size = Vector2(128, 162)
 layout_mode = 3
 anchors_preset = 0
 offset_right = 128.0

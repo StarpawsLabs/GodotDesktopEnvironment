@@ -1,0 +1,76 @@
+[gd_scene load_steps=2 format=3 uid="uid://due37cfqbqgxi"]
+
+[ext_resource type="Script" uid="uid://tugyf5r4dte2" path="res://addons/GodotVirtualPC/src/prefabs/window.gd" id="1_c6hj0"]
+
+[node name="Window" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_c6hj0")
+
+[node name="systemPage" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.028189123, 0, 0.87833035, 1)
+
+[node name="exit" type="Button" parent="systemPage"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -38.0
+offset_right = 2.0
+offset_bottom = 40.0
+grow_horizontal = 0
+text = "exit"
+
+[node name="windowOrFullWindow" type="Button" parent="systemPage"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -83.0
+offset_right = -43.0
+offset_bottom = 40.0
+grow_horizontal = 0
+text = "win"
+
+[node name="minimize" type="Button" parent="systemPage"]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -133.0
+offset_right = -93.0
+offset_bottom = 40.0
+grow_horizontal = 0
+text = "min"
+
+[node name="icon" type="TextureRect" parent="systemPage"]
+layout_mode = 0
+offset_left = 19.0
+offset_right = 59.0
+offset_bottom = 40.0
+expand_mode = 1
+
+[node name="softwarePage" type="ColorRect" parent="systemPage"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 15.0
+offset_top = 52.0
+offset_right = -15.0
+offset_bottom = -12.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[connection signal="pressed" from="systemPage/exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="systemPage/minimize" to="." method="_on_minimize_pressed"]
