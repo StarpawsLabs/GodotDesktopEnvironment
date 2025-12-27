@@ -1,0 +1,14 @@
+[gd_scene load_steps=2 format=3 uid="uid://dssn3t7to7fql"]
+
+[ext_resource type="PackedScene" uid="uid://bnf4lmt6poukd" path="res://GodotVirtualPC/Prefabs/pc.tscn" id="1_7vqr4"]
+
+[node name="Demo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PC" parent="." instance=ExtResource("1_7vqr4")]
+layout_mode = 1

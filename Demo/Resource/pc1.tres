@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="PCInfo" load_steps=7 format=3 uid="uid://dlj6afjl0mkar"]
+
+[ext_resource type="Script" uid="uid://d1o5vujj5agvs" path="res://GodotVirtualPC/script/Resource/pc_info.gd" id="1_g3nay"]
+[ext_resource type="Script" uid="uid://cmxekcmhqj3ao" path="res://GodotVirtualPC/script/Resource/file_base.gd" id="1_noejd"]
+[ext_resource type="Texture2D" uid="uid://c7kib7ubtikl8" path="res://GodotVirtualPC/Resource/icon.svg" id="2_g3nay"]
+[ext_resource type="Resource" uid="uid://bkwlrlavfe57g" path="res://Demo/Resource/notepad.tres" id="3_jgvnv"]
+[ext_resource type="Resource" uid="uid://cg6dpxs0ssdmb" path="res://Demo/Resource/hello.tres" id="3_ue4mt"]
+[ext_resource type="Resource" uid="uid://dpivud4u3340f" path="res://Demo/Resource/world.tres" id="4_jgvnv"]
+
+[resource]
+script = ExtResource("1_g3nay")
+wallpaper = ExtResource("2_g3nay")
+desptop_items = Array[ExtResource("1_noejd")]([ExtResource("3_ue4mt"), ExtResource("3_jgvnv"), ExtResource("4_jgvnv")])
+metadata/_custom_type_script = "uid://d1o5vujj5agvs"

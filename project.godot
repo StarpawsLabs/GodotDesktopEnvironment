@@ -11,14 +11,20 @@ config_version=5
 [application]
 
 config/name="GodotVirtualPC"
-run/main_scene="uid://b4rr8065eky0o"
-config/features=PackedStringArray("4.5", "Forward Plus")
-config/icon="res://icon.svg"
+run/main_scene="uid://bnf4lmt6poukd"
+config/features=PackedStringArray("4.5", "GL Compatibility")
+config/icon="res://GodotVirtualPC/Resource/icon.svg"
+
+[display]
+
+window/stretch/mode="canvas_items"
+window/stretch/aspect="keep_height"
 
 [dotnet]
 
 project/assembly_name="GodotVirtualPC"
 
-[editor_plugins]
+[rendering]
 
-enabled=PackedStringArray("res://addons/GodotVirtualPC/plugin.cfg")
+renderer/rendering_method="gl_compatibility"
+renderer/rendering_method.mobile="gl_compatibility"

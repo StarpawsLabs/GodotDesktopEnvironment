@@ -1,0 +1,70 @@
+[gd_scene load_steps=2 format=3 uid="uid://bpr2rxgsx5nb1"]
+
+[ext_resource type="Script" uid="uid://c0g4dqc502smr" path="res://GodotVirtualPC/script/PC/software_windows.gd" id="1_0ugqh"]
+
+[node name="SoftwareWindows" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_0ugqh")
+
+[node name="backword" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.19831166, 0.572668, 0.94874126, 1)
+
+[node name="SoftwarePage" type="ColorRect" parent="backword"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 8.0
+offset_top = 44.0
+offset_right = -10.0
+offset_bottom = -7.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Exit" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -44.0
+offset_top = 2.0
+offset_right = -4.0
+offset_bottom = 42.0
+grow_horizontal = 0
+
+[node name="Minimize" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -90.0
+offset_top = 2.0
+offset_right = -50.0
+offset_bottom = 42.0
+grow_horizontal = 0
+
+[node name="Hide" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = -136.0
+offset_top = 2.0
+offset_right = -96.0
+offset_bottom = 42.0
+grow_horizontal = 0
+
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Minimize" to="." method="_on_minimize_pressed"]
+[connection signal="pressed" from="Hide" to="." method="_on_hide_pressed"]
