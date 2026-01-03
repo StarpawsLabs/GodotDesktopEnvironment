@@ -44,3 +44,4 @@ script = ExtResource("5_5b1b7")
 
 [connection signal="file_clicked" from="SoftwareMgr" to="." method="_on_software_mgr_file_clicked"]
 [connection signal="software_clicked" from="SoftwareMgr" to="." method="_on_software_mgr_software_clicked"]
+[connection signal="program_exit" from="Window" to="Window" method="close_window"]

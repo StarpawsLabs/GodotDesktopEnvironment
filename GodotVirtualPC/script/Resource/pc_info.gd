@@ -20,7 +20,14 @@ var _desptop_items:Array[FileBase]
 	get:
 		return _desptop_items
 		
-		
+var _process_ran:Array[ProgramProcess]
+@export var process_ran:Array[ProgramProcess]:
+	set(value):
+		if _process_ran!=value:
+			_process_ran = value
+			emit_changed()
+	get:
+		return _process_ran
 		
 
 		

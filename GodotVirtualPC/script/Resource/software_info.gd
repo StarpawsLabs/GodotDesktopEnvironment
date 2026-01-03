@@ -2,6 +2,21 @@
 extends FileBase
 class_name SoftwareInfo
 
+
+var _software_type:SOFTWARE_TYPE
+@export var software_type:SOFTWARE_TYPE:
+	set(value):
+		if _software_type!=value:
+			_software_type = value
+			emit_changed()
+	get:
+		return _software_type
+
+enum SOFTWARE_TYPE{
+	WINDOW,
+	BACKGROUND
+}
+
 @export var softwares_name:String:
 	set(value):
 		if displayed_file_name!=value:
