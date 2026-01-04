@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="FileInfo" load_steps=4 format=3 uid="uid://c8p37dduw7eea"]
+
+[ext_resource type="Resource" uid="uid://dlous2ujalqaa" path="res://Demo/NotePad/Resource/notepad.tres" id="1_bj8eo"]
+[ext_resource type="Texture2D" uid="uid://c7kib7ubtikl8" path="res://GodotVirtualPC/Resource/icon.svg" id="2_k3uet"]
+[ext_resource type="Script" uid="uid://l7lh6usv81o" path="res://GodotVirtualPC/script/Resource/file_info.gd" id="3_851v5"]
+
+[resource]
+script = ExtResource("3_851v5")
+file_name = "World.txt"
+file_data = "World"
+default_opener = ExtResource("1_bj8eo")
+icon = ExtResource("2_k3uet")
+icon_pos = Vector2i(1, 1)
+metadata/_custom_type_script = "uid://l7lh6usv81o"

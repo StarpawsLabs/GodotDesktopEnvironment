@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="PCInfo" load_steps=8 format=3 uid="uid://c8f1ul24d15kg"]
+
+[ext_resource type="Script" uid="uid://cmxekcmhqj3ao" path="res://GodotVirtualPC/script/Resource/file_base.gd" id="1_80i4p"]
+[ext_resource type="Resource" uid="uid://dlous2ujalqaa" path="res://Demo/NotePad/Resource/notepad.tres" id="2_4coye"]
+[ext_resource type="Resource" uid="uid://c8p37dduw7eea" path="res://Demo/NotePad/Resource/World_TXT.tres" id="2_kfobj"]
+[ext_resource type="Script" uid="uid://dypfruk6541v7" path="res://GodotVirtualPC/script/Resource/program_process.gd" id="2_qmfyk"]
+[ext_resource type="Script" uid="uid://d1o5vujj5agvs" path="res://GodotVirtualPC/script/Resource/pc_info.gd" id="3_4coye"]
+[ext_resource type="Resource" uid="uid://b4c0qnt27skus" path="res://Demo/NotePad/Resource/Hello_TXT.tres" id="4_erikx"]
+[ext_resource type="Texture2D" uid="uid://c7kib7ubtikl8" path="res://GodotVirtualPC/Resource/icon.svg" id="4_kfobj"]
+
+[resource]
+script = ExtResource("3_4coye")
+wallpaper = ExtResource("4_kfobj")
+desktop_items = Array[ExtResource("1_80i4p")]([ExtResource("4_erikx"), ExtResource("2_4coye"), ExtResource("2_kfobj")])
+metadata/_custom_type_script = "uid://d1o5vujj5agvs"

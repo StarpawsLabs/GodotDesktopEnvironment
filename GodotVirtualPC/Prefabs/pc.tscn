@@ -1,10 +1,10 @@
 [gd_scene load_steps=6 format=3 uid="uid://bnf4lmt6poukd"]
 
 [ext_resource type="Script" uid="uid://ccuamuk8cbqel" path="res://GodotVirtualPC/script/PC/pc.gd" id="1_gahgx"]
-[ext_resource type="Resource" uid="uid://dlj6afjl0mkar" path="res://Demo/Resource/pc1.tres" id="2_p6ky5"]
 [ext_resource type="Texture2D" uid="uid://c7kib7ubtikl8" path="res://GodotVirtualPC/Resource/icon.svg" id="3_p6ky5"]
 [ext_resource type="Script" uid="uid://efkrawha47f4" path="res://GodotVirtualPC/script/PC/software_mgr.gd" id="4_r2voq"]
 [ext_resource type="Script" uid="uid://dsrksq2ws6t75" path="res://GodotVirtualPC/script/PC/window.gd" id="5_5b1b7"]
+[ext_resource type="Script" uid="uid://ceowiplbflyq2" path="res://GodotVirtualPC/script/PC/process_mgr.gd" id="6_4yobr"]
 
 [node name="PC" type="Control"]
 layout_mode = 3
@@ -14,7 +14,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_gahgx")
-pc_info = ExtResource("2_p6ky5")
 desktop_size = Vector2i(128, 170)
 desktop_grid_size = Vector2i(9, 3)
 
@@ -42,6 +41,13 @@ grow_vertical = 2
 mouse_filter = 2
 script = ExtResource("5_5b1b7")
 
+[node name="ProcessMgr" type="Control" parent="."]
+anchors_preset = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("6_4yobr")
+
 [connection signal="file_clicked" from="SoftwareMgr" to="." method="_on_software_mgr_file_clicked"]
 [connection signal="software_clicked" from="SoftwareMgr" to="." method="_on_software_mgr_software_clicked"]
+[connection signal="program_exit" from="Window" to="." method="close_program"]
 [connection signal="program_exit" from="Window" to="Window" method="close_window"]

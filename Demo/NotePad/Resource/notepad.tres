@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="SoftwareInfo" load_steps=5 format=3 uid="uid://dlous2ujalqaa"]
+
+[ext_resource type="Script" uid="uid://douymotvlfcrt" path="res://GodotVirtualPC/script/Resource/software_info.gd" id="1_357qf"]
+[ext_resource type="Texture2D" uid="uid://c7kib7ubtikl8" path="res://GodotVirtualPC/Resource/icon.svg" id="1_nging"]
+[ext_resource type="PackedScene" uid="uid://bsbjgvptm4ixj" path="res://Demo/NotePad/Prefab/notepad_window.tscn" id="3_f4wfa"]
+[ext_resource type="Script" uid="uid://ovj704t1g3rq" path="res://Demo/NotePad/script/notepad_script.gd" id="3_i8qph"]
+
+[resource]
+script = ExtResource("1_357qf")
+softwares_name = "notepad"
+icon = ExtResource("1_nging")
+software_window = ExtResource("3_f4wfa")
+software_script = ExtResource("3_i8qph")
+icon_pos = Vector2i(6, 1)
+metadata/_custom_type_script = "uid://douymotvlfcrt"

@@ -11,14 +11,14 @@ var _wallpaper:Texture2D
 	get:
 		return _wallpaper
 
-var _desptop_items:Array[FileBase]
-@export var desptop_items:Array[FileBase]:
+var _desktop_items:Array[FileBase]
+@export var desktop_items:Array[FileBase]:
 	set(value):
-		if _desptop_items!=value:
-			_desptop_items = value
+		if _desktop_items!=value:
+			_desktop_items = value
 			emit_changed()
 	get:
-		return _desptop_items
+		return _desktop_items
 		
 var _process_ran:Array[ProgramProcess]
 @export var process_ran:Array[ProgramProcess]:

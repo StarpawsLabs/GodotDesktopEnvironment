@@ -17,7 +17,7 @@ var _pc_info:PCInfo
 	get:
 		return _pc_info
 
-@export_group('123')
+@export_group('desktop info')
 var _desktop_size:Vector2i
 @export var desktop_size:Vector2i:
 	set(value):
@@ -46,25 +46,21 @@ func reflesh_ps():
 	if pc_info!=null:
 		wallpaper.texture = _pc_info.wallpaper
 		software_mgr.flesh_desktop(pc_info,desktop_size,desktop_grid_size)
+		$ProcessMgr.init_process_mgr(pc_info)
+
 
 
 func open_program(_info:SoftwareInfo,open_argc:Array):
-	var program_process = ProgramProcess.new()
-	program_process.software_info = _info
-	program_process.window_pos = Vector2i(0,0)
-	program_process.process_id = program_process.get_instance_id()
-	pc_info.process_ran.append(program_process)
+	var process = $ProcessMgr.create_process(_info,open_argc)
 	if _info.software_type == _info.SOFTWARE_TYPE.WINDOW:
-		$Window.open_window(program_process,open_argc)
+		var window_node = $Window.open_window(_info,process.process_id)
+		window_node.software_window_node.call_script.connect(process.process_script_node.called)
+		process.process_script_node.call_window.connect(window_node.software_window_node.called)
+		$Window.flseh_window(window_node)
+		$ProcessMgr.flseh_process(process)
+func close_program(id: int) -> void:
+	$ProcessMgr.remove_process(id)
 
-func close_program(_software_info: SoftwareInfo) -> void:
-	var closed_program = null
-	for process in pc_info.process_ran:
-		if process.software_info == _software_info:
-			closed_program = process
-		break
-	if closed_program!= null:
-		pc_info.process_ran.erase(closed_program)
 
 
 

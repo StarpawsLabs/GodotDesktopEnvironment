@@ -28,3 +28,4 @@ var _window_pos : Vector2i
 			emit_changed()
 	get:
 		return _window_pos
+var process_script_node:Node

@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://dawwttiiy23oy"]
+
+[ext_resource type="PackedScene" uid="uid://bnf4lmt6poukd" path="res://GodotVirtualPC/Prefabs/pc.tscn" id="1_vqgu1"]
+[ext_resource type="Resource" uid="uid://c8f1ul24d15kg" path="res://Demo/NotePad/Resource/pc.tres" id="2_3d3ha"]
+
+[node name="Demo" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="PC" parent="." instance=ExtResource("1_vqgu1")]
+layout_mode = 1
+pc_info = ExtResource("2_3d3ha")
+desktop_grid_size = Vector2i(8, 3)

@@ -41,3 +41,11 @@ var _software_window : PackedScene
 			emit_changed()
 	get:
 		return _software_window
+var _software_script : GDScript
+@export var software_script:GDScript:
+	set(value):
+		if _software_script!=value:
+			_software_script = value
+			emit_changed()
+	get:
+		return _software_script

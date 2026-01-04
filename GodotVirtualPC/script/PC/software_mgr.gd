@@ -38,8 +38,8 @@ func flesh_desktop(info:PCInfo,_desktop_size:Vector2i,desktop_grid_size:Vector2i
 	_icon_continer.clear()
 	desktop_size = _desktop_size
 	max_grid_size=desktop_grid_size
-	if info.desptop_items!=null:
-		for desktop_item in info.desptop_items:
+	if info.desktop_items!=null:
+		for desktop_item in info.desktop_items:
 			if desktop_item!=null:
 				set_icon_continer(desktop_item)
 	
